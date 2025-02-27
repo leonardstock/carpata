@@ -25,12 +25,15 @@ The website is responsive and adapts to different screen sizes. I have used the 
 
 Disclaimer: I added the confetti solely for the amusement of the test administator and would of course not include it in a production environment.
 
+For the API I used a simple node backend which can be built directly in the Nextjs app. I have three routes with get requests for makes, models and submodels respectively.
+
 ## Assumptions made
 
-I assumed that the optional categories (fuel type, transmission, engine size) were not for filtering and do not need to be filtered. Furthermore, I assumed that once the user clicked on find parts, going back would be a reset.
+-   I assumed that the optional categories (fuel type, transmission, engine size) were not for filtering and do not need to be filtered.
+-   Furthermore, I assumed that once the user clicked on find parts, going back would be a reset.
 
 ## What I would improve or add with more time
 
-I would add redux toolkit state management to keep state between the /done and home page to improve UX. Apart from that I would include a call to an AI to show an image of the car selected to make
-it easier for inexperienced users to know whether they have picked the right car. I have used a third-party select component for searching through (a potentially big) list of makes, but ideally
-would build my own component since I can then control it better. I would also filter the remaining categories based on previous choices to make the margin of error as small as possible.
+-   I would add redux toolkit state management to keep state between the /done and home page to improve UX.
+-   Apart from that I would include a call to an AI to show an image of the car selected to make it easier for inexperienced users to know whether they have picked the right car.
+-   I have used a third-party select component for searching through (a potentially big) list of makes, but ideally would build my own component since I can then control it better. I would also filter the remaining categories based on previous choices to make the margin of error as small as possible.
