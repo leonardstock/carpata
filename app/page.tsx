@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import CustomSelect from "./components/CustomSelect";
 import LoadingIndicator from "./components/LoadingIndicator";
 import dynamic from "next/dynamic";
-import { redirect } from "next/navigation";
+import Link from "next/link";
 
 type ModelResponse = {
     id: string;
@@ -373,14 +373,11 @@ export default function Home() {
                         }}>
                         Edit Car
                     </button>
-                    <button
+                    <Link
                         className='mt-6 rounded-lg bg-[rgb(31,234,126)] text-black px-6 py-2 text-center font-bold cursor-pointer hover:bg-[#93fcc2] self-center'
-                        disabled={make?.value === "" || model === ""}
-                        onClick={() => {
-                            redirect("/done");
-                        }}>
+                        href={"/done"}>
                         Find Parts
-                    </button>
+                    </Link>
                 </div>
             </section>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import { redirect } from "next/navigation";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
 
@@ -12,11 +12,9 @@ const DonePage = () => {
             <h1 className='text-4xl my-6 font-bold text-white text-center'>
                 Thank you for using Carpata!
             </h1>
-            <button
-                onClick={() => redirect("/")}
-                className='cursor-pointer underline'>
+            <Link href={"/"} className='cursor-pointer underline'>
                 Back to Home
-            </button>
+            </Link>
         </div>
     );
 };
