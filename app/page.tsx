@@ -108,10 +108,10 @@ export default function Home() {
                             <div className='text-center flex flex-col items-center pb-10'>
                                 <Image
                                     src={"/CPlogodk.svg"}
-                                    alt='logo'
-                                    width={0}
-                                    height={0}
-                                    className='mb-10 w-[200px] h-auto'
+                                    alt='Carpata logo'
+                                    width={200}
+                                    height={48}
+                                    className='mb-10'
                                 />
                                 <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>
                                     <span className='block text-white'>
