@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import CustomSelect from "./components/CustomSelect";
 import LoadingIndicator from "./components/LoadingIndicator";
 import dynamic from "next/dynamic";
+import { redirect } from "next/navigation";
 
 type ModelResponse = {
     id: string;
@@ -159,31 +160,6 @@ export default function Home() {
                                     className='mt-1 block w-full rounded-md text-black'
                                     isClearable
                                 />
-                                {/* <select
-                                    id='make'
-                                    name='make'
-                                    required
-                                    value={make}
-                                    onChange={(e) => {
-                                        setMake(e.target.value);
-                                        setModel("");
-                                        setDateOfManufacture("");
-                                        setSubmodel("");
-                                    }}
-                                    className='mt-1 block w-full rounded-md border-gray-300 shadow-sm p-5 text-black'>
-                                    <option value='' disabled>
-                                        Select a make
-                                    </option>
-                                    {allMakes.map((make) => (
-                                        <option
-                                            key={make}
-                                            value={make}
-                                            className='text-black'>
-                                            {make.slice(0, 1).toUpperCase() +
-                                                make.slice(1).toLowerCase()}
-                                        </option>
-                                    ))}
-                                </select> */}
                             </div>
                         </div>
 
@@ -401,7 +377,7 @@ export default function Home() {
                         className='mt-6 rounded-lg bg-[rgb(31,234,126)] text-black px-6 py-2 text-center font-bold cursor-pointer hover:bg-[#93fcc2] self-center'
                         disabled={make?.value === "" || model === ""}
                         onClick={() => {
-                            console.log("clicked");
+                            redirect("/done");
                         }}>
                         Find Parts
                     </button>
